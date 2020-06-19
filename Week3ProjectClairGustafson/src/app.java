@@ -61,7 +61,7 @@ public class app {
 		for (String name : names) {
 			totalLetters += name.length();
 	}
-		System.out.println(names.length + nameLengths.length);
+		System.out.println("The total number of elements in the arrays:" + (names.length + nameLengths.length));
 		
 		
 		//6 Write a loop to iterate over the nameLengths array
@@ -82,7 +82,7 @@ public class app {
 		String lastName = "Gustafson";
 		String fullName = createFullName(firstName, lastName);
 		
-		System.out.println(fullName);
+		System.out.println("My name is " + fullName);
 		
 		
 		//9 Create method, int array, and return true if greater than 100
@@ -92,13 +92,13 @@ public class app {
 		for (int num : numbers) {
 			sum = sum + num;
 		}
-		System.out.println(isTrue(sum));
+		System.out.println("Is the total greater than 100? " + (isTrue(sum)));
 		
 		
 		//10 Array of doubles
 		double[] grades = new double[] {45.6, 32.7, 88.7, 13.5, 12.5, 66.4, 78.7, 89.6, 98.1};
 		
-		System.out.println(doubleAverage(grades));
+		System.out.println("What is the average grade? " + (doubleAverage(grades)));
 		
 		
 		//11 Two arrays of double
@@ -114,21 +114,21 @@ public class app {
 			secondAVG += second.length;
 		}
 		
-		System.out.println(whichIsGreater(one, second));
+		System.out.println("Is the first array greater than the second? " + whichIsGreater(one, second));
 		
 		
 		//12 Is it hot outside and do I have money in my pocket?
 		double moneyInPocket = 12.45;
 		boolean isHotOutside = true;
 		
-		System.out.println(willBuyDrink(isHotOutside, moneyInPocket));
+		System.out.println("Will I buy a drink if it is hot outside? " + willBuyDrink(isHotOutside, moneyInPocket));
 		
 		
 		//13 Write my own method
 		double Clover = 25.6;
 		double Finn = 31;
 		
-		System.out.println(overweightCorgi(Clover, Finn));
+		System.out.println("Are my corgis overweight? " + overweightCorgi(Clover, Finn));
 		
 	}
 	//7 Method repeatWords
@@ -170,8 +170,7 @@ public class app {
 				return true;
 			}
 			else {
-				return false;
-				
+				return false;	
 			}
 		} 
 		
@@ -183,7 +182,7 @@ public class app {
 		
 	//13 Method will determine if my dogs are overweight or not. If they are over 30 lbs then they are overweight, otherwise false.
 		public static boolean overweightCorgi (double Clover, double Finn){
-			return (Clover > 30 && Finn > 30);	
+			return (Clover > 30 || Finn > 30);	
 		}
 }
 
