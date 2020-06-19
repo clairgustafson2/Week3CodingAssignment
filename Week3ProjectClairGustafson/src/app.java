@@ -9,13 +9,13 @@ public class app {
 		//1a. subtract the first element in the array from the last element in the array
 		int first = ages[0];
 		int last = ages[ages.length-1];
-		System.out.println(last-first);
+		System.out.println("The first age minus the last age " + (last-first));
 		
 		//1b. add new age. 13 was added
 		int [] newAges = new int[] {3, 9, 23, 64, 2, 8, 28, 93, 13};
 		int first1 = newAges[0];
 		int last1 = newAges[newAges.length-1];
-		System.out.println(last1-first1);
+		System.out.println("The first age minus the last age " + (last1-first1));
 		
 		//1c. average of ages in array
 		double average = 0;
@@ -25,7 +25,7 @@ public class app {
 		}
 		double total = average/ages.length;
 		 
-		System.out.println(total);
+		System.out.println("The average of the array is: " + total);
 		
 		
 		//Step 2. Create an array of String called names
@@ -37,7 +37,7 @@ public class app {
 		for (String name : names) {
 			totalLetters += name.length();	
 		} 
-		System.out.println(totalLetters/names.length);
+		System.out.println("The average number of letters is: " + (totalLetters/names.length));
 		
 		//2b. Concatenate all the names together and separated by spaces
 		StringBuilder combineNames = new StringBuilder();
@@ -48,9 +48,12 @@ public class app {
 
 		System.out.println(newString);
 		
+		
 		//3 How do you access the last element of any array?
 		
+		
 		//4 How do you access the first element of any array?
+		
 		
 		//5 Create a new array of int called nameLengths. 
 		int [] nameLengths= new int[] {5, 6, 3, 5, 6, 8, 3, 4};		
@@ -58,12 +61,21 @@ public class app {
 		for (String name : names) {
 			totalLetters += name.length();
 	}
-		System.out.println(totalLetters);
+		System.out.println(names.length + nameLengths.length);
+		
 		
 		//6 Write a loop to iterate over the nameLengths array
+		int nameSum =0;
+		
+		for (int nameLength: nameLengths) {
+			nameSum = nameSum + nameLength;
+		}
+		System.out.println("The sum of the elements in the array: " + nameSum);
+		
 		
 		//7 Write a method that takes a String, word, and an int
 		System.out.println(repeatWords("Hello", 4));
+		
 		
 		//8 firstName and lastName
 		String firstName = "Clair";
@@ -71,6 +83,7 @@ public class app {
 		String fullName = createFullName(firstName, lastName);
 		
 		System.out.println(fullName);
+		
 		
 		//9 Create method, int array, and return true if greater than 100
 		int [] numbers = new int [] {2, 7, 4, 9, 13, 56, 34, 45};
@@ -81,18 +94,41 @@ public class app {
 		}
 		System.out.println(isTrue(sum));
 		
+		
 		//10 Array of doubles
 		double[] grades = new double[] {45.6, 32.7, 88.7, 13.5, 12.5, 66.4, 78.7, 89.6, 98.1};
 		
 		System.out.println(doubleAverage(grades));
 		
+		
 		//11 Two arrays of double
+		double [] one = new double[] {4, 1.4, 7.4, 2.8, 3.4, 8, 7.8};
+		double [] second = new double[] {8.8, 3.7, 6.6, 4, 5.6, 3.9, 8.1};
+		
+		double firstAVG = 0;
+		for (double ones : one) {
+			firstAVG += one.length;
+		}
+		double secondAVG =0;
+		for (double seconds : second) {
+			secondAVG += second.length;
+		}
+		
+		System.out.println(whichIsGreater(one, second));
+		
 		
 		//12 Is it hot outside and do I have money in my pocket?
 		double moneyInPocket = 12.45;
 		boolean isHotOutside = true;
 		
 		System.out.println(willBuyDrink(isHotOutside, moneyInPocket));
+		
+		
+		//13 Write my own method
+		double Clover = 25.6;
+		double Finn = 31;
+		
+		System.out.println(overweightCorgi(Clover, Finn));
 		
 	}
 	//7 Method repeatWords
@@ -126,17 +162,28 @@ public class app {
 	}
 	
 		//11 Method whichIsGreater
-//		public static boolean whichIsGreater (double[] x, double[] y) {
-//			
-//			if (x>y && y<x) {
-//				return true;
-//			}
-//			
-//		}
+		public static boolean whichIsGreater (double[] first, double[] second) {
+			double firstSum = 0;
+			double secondSum = 0;
+			
+			if (firstSum > secondSum) {
+				return true;
+			}
+			else {
+				return false;
+				
+			}
+		} 
+		
 		
 	//12 Method willBuyDrink
 		public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
 			return (isHotOutside == true && moneyInPocket > 10.5);
+		}
+		
+	//13 Method will determine if my dogs are overweight or not. If they are over 30 lbs then they are overweight, otherwise false.
+		public static boolean overweightCorgi (double Clover, double Finn){
+			return (Clover > 30 && Finn > 30);	
 		}
 }
 
