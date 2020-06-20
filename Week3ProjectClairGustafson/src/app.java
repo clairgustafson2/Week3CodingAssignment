@@ -9,13 +9,14 @@ public class app {
 		//1a. subtract the first element in the array from the last element in the array
 		int first = ages[0];
 		int last = ages[ages.length-1];
-		System.out.println("The first age minus the last age " + (last-first));
+		System.out.println("1a. The first age minus the last age " + (last-first));
+		
 		
 		//1b. add new age. 13 was added
 		int [] newAges = new int[] {3, 9, 23, 64, 2, 8, 28, 93, 13};
 		int first1 = newAges[0];
 		int last1 = newAges[newAges.length-1];
-		System.out.println("The first age minus the last age " + (last1-first1));
+		System.out.println("1b. The first age minus the last age " + (last1-first1));
 		
 		//1c. average of ages in array
 		double average = 0;
@@ -25,7 +26,7 @@ public class app {
 		}
 		double total = average/ages.length;
 		 
-		System.out.println("The average of the array is: " + total);
+		System.out.println("1c. The average of the array is: " + total);
 		
 		
 		//Step 2. Create an array of String called names
@@ -37,7 +38,7 @@ public class app {
 		for (String name : names) {
 			totalLetters += name.length();	
 		} 
-		System.out.println("The average number of letters is: " + (totalLetters/names.length));
+		System.out.println("2a. The average number of letters is: " + (totalLetters/names.length));
 		
 		//2b. Concatenate all the names together and separated by spaces
 		StringBuilder combineNames = new StringBuilder();
@@ -49,19 +50,20 @@ public class app {
 		System.out.println(newString);
 		
 		
-		//3 How do you access the last element of any array?
+		//3 How do you access the last element of any array? Use the code below to access the last element
+		//int exampleList = sample[sample.length-1];
 		
-		
-		//4 How do you access the first element of any array?
-		
+		//4 How do you access the first element of any array? Use the code below to access the first element
+		//int sample = example[0];
 		
 		//5 Create a new array of int called nameLengths. 
-		int [] nameLengths= new int[] {5, 6, 3, 5, 6, 8, 3, 4};		
+		int nameLengths[] = new int[names.length];		
 			
 		for (String name : names) {
-			totalLetters += name.length();
-	}
-		System.out.println("The total number of elements in the arrays:" + (names.length + nameLengths.length));
+			nameLengths.add(name.length);
+		}
+		
+		System.out.println("5. The total number of elements in the arrays:" + (names.length + nameLengths.length));
 		
 		
 		//6 Write a loop to iterate over the nameLengths array
@@ -70,7 +72,7 @@ public class app {
 		for (int nameLength: nameLengths) {
 			nameSum = nameSum + nameLength;
 		}
-		System.out.println("The sum of the elements in the array: " + nameSum);
+		System.out.println("6. The sum of the elements in the array: " + nameSum);
 		
 		
 		//7 Write a method that takes a String, word, and an int
@@ -82,7 +84,7 @@ public class app {
 		String lastName = "Gustafson";
 		String fullName = createFullName(firstName, lastName);
 		
-		System.out.println("My name is " + fullName);
+		System.out.println("8. My name is " + fullName);
 		
 		
 		//9 Create method, int array, and return true if greater than 100
@@ -92,13 +94,13 @@ public class app {
 		for (int num : numbers) {
 			sum = sum + num;
 		}
-		System.out.println("Is the total greater than 100? " + (isTrue(sum)));
+		System.out.println("9. Is the total greater than 100? " + (isTrue(sum)));
 		
 		
 		//10 Array of doubles
 		double[] grades = new double[] {45.6, 32.7, 88.7, 13.5, 12.5, 66.4, 78.7, 89.6, 98.1};
 		
-		System.out.println("What is the average grade? " + (doubleAverage(grades)));
+		System.out.println("10. What is the average grade? " + (doubleAverage(grades)));
 		
 		
 		//11 Two arrays of double
@@ -114,21 +116,21 @@ public class app {
 			secondAVG += second.length;
 		}
 		
-		System.out.println("Is the first array greater than the second? " + whichIsGreater(one, second));
+		System.out.println("11. Is the first array greater than the second? " + whichIsGreater(one, second));
 		
 		
 		//12 Is it hot outside and do I have money in my pocket?
 		double moneyInPocket = 12.45;
 		boolean isHotOutside = true;
 		
-		System.out.println("Will I buy a drink if it is hot outside? " + willBuyDrink(isHotOutside, moneyInPocket));
+		System.out.println("12. Will I buy a drink if it is hot outside? " + willBuyDrink(isHotOutside, moneyInPocket));
 		
 		
 		//13 Write my own method
 		double Clover = 25.6;
 		double Finn = 31;
 		
-		System.out.println("Are my corgis overweight? " + overweightCorgi(Clover, Finn));
+		System.out.println("13. Are my corgis overweight? " + overweightCorgi(Clover, Finn));
 		
 	}
 	//7 Method repeatWords
