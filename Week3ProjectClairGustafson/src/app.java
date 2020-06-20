@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class app {
 
 	public static void main(String[] args) {
@@ -59,18 +61,18 @@ public class app {
 		//5 Create a new array of int called nameLengths. 
 		int nameLengths[] = new int[names.length];		
 			
-		for (String name : names) {
-			nameLengths.add(name.length);
+		for (int j =0; j <nameLengths.length;j++) {
+			nameLengths[j] = names[j].length();
 		}
 		
-		System.out.println("5. The total number of elements in the arrays:" + (names.length + nameLengths.length));
+		System.out.println(Arrays.toString(nameLengths));
 		
 		
 		//6 Write a loop to iterate over the nameLengths array
 		int nameSum =0;
 		
 		for (int nameLength: nameLengths) {
-			nameSum = nameSum + nameLength;
+			nameSum += nameLength;
 		}
 		System.out.println("6. The sum of the elements in the array: " + nameSum);
 		
